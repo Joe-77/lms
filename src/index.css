@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#email:focus + .labelMail,
+#pass:focus + .labelPass,
+#name:focus + .labelName {
+  color: green;
+}
+
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+.imgLogin,
+.loginImg {
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+}
+.circle::after {
+  content: "or";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+iframe {
+  border-radius: 12px !important;
+  border: none !important;
+}
+.activeLi {
+  box-shadow: 0 0 5px #6b7280;
+  border: 1px solid blue;
+}
