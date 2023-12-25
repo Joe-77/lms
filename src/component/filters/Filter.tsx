@@ -15,12 +15,13 @@ const Filter = () => {
     li.addEventListener("click", removeActiveClass);
   });
 
-  function removeActiveClass() {
+  function removeActiveClass(this: HTMLLIElement) {
     switchLi.forEach((li) => {
       li.classList.remove("activeLi");
       this.classList.add("activeLi");
     });
   }
+
 
   const { setCategory } = useContext(Context);
 
